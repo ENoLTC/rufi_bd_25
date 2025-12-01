@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // GitHub Pages не поддерживает оптимизацию изображений
   },
   basePath: '/rufi_bd_25', // Замените на имя вашего репозитория
-  assetPrefix: '/rufi_bd_25/',
+  assetPrefix: '/rufi_bd_25',
 }
 
 export default nextConfig;
