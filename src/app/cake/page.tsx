@@ -109,7 +109,7 @@ export default function Cake() {
           alert(`Статус разрешения микрофона: ${ result.state }`,);
         })
         .catch(err => {
-          alert("Не удалось проверить разрешения:", err);
+          alert(`Не удалось проверить разрешения: ${err}`,);
         });
     }
     return () => {
@@ -119,36 +119,6 @@ export default function Cake() {
 
   return (
     <>
-      <style jsx>{`
-        @keyframes flicker {
-          0%, 100% {
-            transform: scale(1) translateY(0);
-            opacity: 1;
-          }
-          25% {
-            transform: scale(1.1) translateY(-2px);
-            opacity: 0.9;
-          }
-          50% {
-            transform: scale(0.95) translateY(1px);
-            opacity: 0.95;
-          }
-          75% {
-            transform: scale(1.05) translateY(-1px);
-            opacity: 0.92;
-          }
-        }
-
-        .flame {
-          animation: flicker 1.5s ease-in-out infinite;
-        }
-
-        .candle-0 .flame { animation-delay: 0s; }
-        .candle-1 .flame { animation-delay: 0.3s; }
-        .candle-2 .flame { animation-delay: 0.6s; }
-        .candle-3 .flame { animation-delay: 0.9s; }
-        .candle-4 .flame { animation-delay: 1.2s; }
-      `}</style>
 
       <h1 className="text-4xl font-bold text-gray-800 mb-10">
         {isListening ? 'ДУЙ! РТОМ!' : 'Загадай желание и задуй огоньки!'}

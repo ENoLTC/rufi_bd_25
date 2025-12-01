@@ -80,23 +80,6 @@ export default function PhotoPage() {
 
   return (
     <>
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.8);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-
-        .photo-fade-in {
-          animation: fadeIn 300ms ease-out forwards;
-        }
-      `}</style>
-
       <>
         {/* Текст поздравления в центре */}
         <>
