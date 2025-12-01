@@ -16,7 +16,7 @@ export default function Page() {
             autoPlay
             className="rounded-lg shadow-lg"
           >
-            <source src="/video.mp4" type="video/mp4" />
+            <source src={`${process.env.PAGES_BASE_PATH || ''}/video.mp4`} type="video/mp4" />
             Твой браузер не поддерживает видео.
           </video>
         </div>
