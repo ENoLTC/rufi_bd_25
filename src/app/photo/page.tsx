@@ -20,11 +20,11 @@ export default function PhotoPage() {
 
   // Массив путей к фоткам в public/photos/
   const photoSources = [
-    "photo/photo1.jpg",
-    "photo/photo2.jpg",
-    "photo/photo3.jpg",
-    "photo/photo4.jpg",
-    "photo/photo5.jpg",
+    "/photo/photo1.jpg",
+    "/photo/photo2.jpg",
+    "/photo/photo3.jpg",
+    "/photo/photo4.jpg",
+    "/photo/photo5.jpg",
   ];
 
   useEffect(() => {
@@ -121,7 +121,7 @@ export default function PhotoPage() {
               style={{ transform: `rotate(${photo.rotation}deg)` }}
             >
               <Image
-                src={`${process.env.PAGES_BASE_PATH || ''}/${photo.src}`}
+                src={`${photo.src}`}
                 alt="Фото"
                 fill
                 className="object-cover"
