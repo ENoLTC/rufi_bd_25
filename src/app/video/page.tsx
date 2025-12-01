@@ -7,7 +7,6 @@ export default function Page() {
 
   return (
       <>
-        {/* Вставь сюда своё видео */}
         <h1 className="text-4xl font-bold text-gray-800 mb-6">🎉С днем рождения, любимая!🎉</h1>
         <div className="mb-6">
           <video
