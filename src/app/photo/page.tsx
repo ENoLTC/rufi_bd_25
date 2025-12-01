@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import {useRouter} from "next/navigation";
+import {getAssetPath} from "@/helpers";
 
 interface Photo {
   id: number;
@@ -20,11 +21,11 @@ export default function PhotoPage() {
 
   // Массив путей к фоткам в public/photos/
   const photoSources = [
-    "/photo/photo1.jpg",
-    "/photo/photo2.jpg",
-    "/photo/photo3.jpg",
-    "/photo/photo4.jpg",
-    "/photo/photo5.jpg",
+    getAssetPath("/photo/photo1.jpg"),
+    getAssetPath("/photo/photo2.jpg"),
+    getAssetPath("/photo/photo3.jpg"),
+    getAssetPath("/photo/photo4.jpg"),
+    getAssetPath("/photo/photo5.jpg"),
   ];
 
   useEffect(() => {

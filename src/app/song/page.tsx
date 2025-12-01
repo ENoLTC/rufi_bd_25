@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import {getAssetPath} from "@/helpers";
 
 export default function Page() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function Page() {
             autoPlay
             className="rounded-lg shadow-lg"
           >
-            <source src={`/song.mp4`} type="video/mp4" />
+            <source src={getAssetPath('/song.mp4')} type="video/mp4" />
             Твой браузер не поддерживает видео.
           </video>
         </div>
