@@ -18,7 +18,8 @@ export default function Page() {
             autoPlay
             className="rounded-lg shadow-lg"
           >
-            <source src={getAssetPath('/song.mp4')} type="video/mp4" />
+            <source     src="https://github.com/ENoLTC/rufi_bd_25/raw/main/public/song.mp4"
+                        type="video/mp4" />
             Твой браузер не поддерживает видео.
           </video>
         </div>
