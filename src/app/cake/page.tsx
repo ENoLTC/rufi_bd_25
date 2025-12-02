@@ -97,21 +97,6 @@ export default function Cake() {
   }, [allCandlesOut]);
 
   useEffect(() => {
-    // Диагностика при загрузке
-    console.log("User Agent:", navigator.userAgent);
-    console.log("MediaDevices доступен:", !!navigator.mediaDevices);
-    console.log("getUserMedia доступен:", !!navigator.mediaDevices?.getUserMedia);
-
-    // Проверяем разрешения (если API доступен)
-    if (navigator.permissions && navigator.permissions.query) {
-      navigator.permissions.query({ name: 'microphone' as PermissionName })
-        .then(result => {
-          alert(`Статус разрешения микрофона: ${ result.state }`,);
-        })
-        .catch(err => {
-          alert(`Не удалось проверить разрешения: ${err}`,);
-        });
-    }
     return () => {
       stopListening();
     }
